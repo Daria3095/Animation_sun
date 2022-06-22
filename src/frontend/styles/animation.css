@@ -1,0 +1,139 @@
+
+body {
+    margin: 0;
+    overflow: hidden;
+    background: black;
+}
+
+.grass {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: url(../img/трава.png) no-repeat center bottom;
+}
+
+.sunset {
+    position: relative;
+    width: 100%;
+    height: 1000px;
+    overflow: hidden;
+    background: rgb(94, 174, 239);
+    box-shadow: 0 -300px 400px -100px rgb(253, 77, 13) inset;
+    animation: sky 29s infinite linear;
+}
+
+@keyframes sky {
+    0% {
+        background: rgb(99, 61, 139);
+    }
+
+    50% {
+        background: rgb(175, 232, 255);
+        box-shadow: 0 -400px 300px -300px rgb(65, 127, 177) inset;
+    }
+
+    85% {
+        background: rgb(99, 61, 139);
+       box-shadow: 0 -400px 300px -300px rgb(238, 90, 4) inset;
+    }
+
+    100% {
+        background: rgb(54, 23, 86);
+    }
+}
+
+.sun {
+    position: absolute;
+    left: 0;
+    bottom: -30%;
+    width: 25rem;
+    height: 25rem;
+    margin-left: -2.5rem;
+    margin-top: 0;
+    background: rgb(255, 89, 0);
+    border-radius: 50%;
+    box-shadow: 0 0 20px rgb(166, 0, 255);
+    animation: 30s infinite linear;
+    animation-name: sun-move, sun-color;
+}
+
+@keyframes sun-color {
+    20% {
+        background: rgb(255, 175, 25);
+    }
+    
+    30% {
+        background: rgb(255, 229, 83);
+        box-shadow: 0 0 50px gold;
+    }
+
+    50% {
+        background: rgb(255, 255, 15);
+        box-shadow: 0 0 50px yellow;
+    }
+
+    70% {
+        background: rgb(255, 132, 0);
+    }
+}
+
+@keyframes sun-move {
+    0% { 
+        margin-left: -4rem;
+    }
+
+    5% {
+        margin-left: -4.5rem;
+    }
+
+    15% {
+        margin-left: -5.5rem;
+        
+    }
+    25% {
+        margin-left: -6rem;
+    }
+
+    35% {
+        margin-left: -5.5rem;
+    }
+
+    40% {
+        margin-left: -4.5rem;
+    }
+
+    45% {
+        margin-left: -3.5rem;
+    }
+
+    50% {
+        left: 50%;
+        bottom: 75%;
+        width: 5rem;
+        height: 5rem;
+        margin-left: -2.5rem;  
+    }
+
+    60% {
+        margin-left: 1.5rem;
+    }
+
+    70% {
+        margin-left: 3.5rem;
+    }
+
+    80% {
+        margin-left: 2.5rem;
+    }
+
+    90% {
+        margin-left: 1rem;
+    }
+
+    100% {
+        left: 95%;
+        margin-left: -2.5rem;
+    }
+}
